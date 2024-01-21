@@ -92,21 +92,108 @@
     <footer class="py-3">
       <div class="container text-center">
         <div class="row">
-          <div class="col">
+          <div class="col" data-toggle="modal" data-target="#calendarModal">
             <img src="img/calendar.png" alt="Icon 1" class="footer-icon" />
             <p class="icon-title">Calendar</p>
           </div>
-          <div class="col">
+          <div class="col" data-toggle="modal" data-target="#telephoneModal">
             <img src="img/telephone.png" alt="Icon 2" class="footer-icon" />
             <p class="icon-title">Telephone</p>
           </div>
-          <div class="col">
+          <div class="col" data-toggle="modal" data-target="#locationModal">
             <img src="img/placeholder.png" alt="Icon 4" class="footer-icon" />
             <p class="icon-title">Location</p>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Modals -->
+    <div
+      class="modal fade"
+      id="calendarModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="calendarModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="calendarModalLabel">Calendar Modal</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Calendar modal content goes here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="telephoneModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="telephoneModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="telephoneModalLabel">
+              Telephone Modal
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Telephone modal content goes here -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="locationModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="locationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="locationModalLabel">Location Modal</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Location modal content goes here -->
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap JS (optional) -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
