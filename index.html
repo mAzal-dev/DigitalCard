@@ -184,11 +184,20 @@
             </button>
           </div>
           <div class="modal-body">
-            <form id="guestBookForm" onsubmit="submitForm(event)">
+            <form
+              action="https://script.google.com/macros/s/AKfycbwJk0izOfdKw6lrjWh6tPGuBP7mkHHacc7UeJlSwdN6_ItcoM_yZBn35qdfo9_68Pu6/exec"
+              method="post"
+            >
               <!-- Form fields go here -->
               <div class="mb-3">
                 <label for="Name" class="form-label">Name:</label>
-                <input type="text" class="form-control" id="name" required />
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  required
+                />
               </div>
               <div class="mb-3">
                 <label for="ucapan" class="form-label">Ucapan:</label>
@@ -196,10 +205,13 @@
                   class="form-control"
                   id="ucapan"
                   rows="3"
+                  name="message"
                   required
                 ></textarea>
               </div>
               <button type="submit">Submit</button>
+              <hr />
+              <div class="modal-body" id="guestBookContent"></div>
             </form>
           </div>
         </div>
@@ -263,5 +275,23 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      fetch(
+        "https://script.google.com/macros/s/AKfycby2iHtql9pSNKN1xAoNiEzZV0OjEeHazz1XfVaE8gbxiL7XL5e4uMBYUupVsnm4TFe8/exec"
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          let modalBody = document.getElementById("guestBookContent");
+
+          // Iterate through the data and create HTML elements to display it
+          data.content.forEach((row) => {
+            let rowElement = document.createElement("div");
+            rowElement.classList.add("guest-book-entry");
+            //rowElement.innerHTML = `<strong>${row[0]}</strong>: ${row[1]}`;
+            rowElement.innerHTML = `<strong>${row[0]}</strong><br><p>${row[1]}</p>`;
+            modalBody.appendChild(rowElement);
+          });
+        });
+    </script>
   </body>
 </html>
