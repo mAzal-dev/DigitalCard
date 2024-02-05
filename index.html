@@ -184,7 +184,23 @@
             </button>
           </div>
           <div class="modal-body">
-            <!-- Telephone modal content goes here -->
+            <form id="guestBookForm" onsubmit="submitForm(event)">
+              <!-- Form fields go here -->
+              <div class="mb-3">
+                <label for="Name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="ucapan" class="form-label">Ucapan:</label>
+                <textarea
+                  class="form-control"
+                  id="ucapan"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Submit</button>
+            </form>
           </div>
         </div>
       </div>
