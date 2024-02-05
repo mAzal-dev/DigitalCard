@@ -285,7 +285,7 @@
             let rowElement = document.createElement("div");
             rowElement.classList.add("guest-book-entry");
             //rowElement.innerHTML = `<strong>${row[0]}</strong>: ${row[1]}`;
-            rowElement.innerHTML = `<strong>${row[1]}</strong><span>${row[0]}</span><br><p>${row[2]}</p>`;
+            rowElement.innerHTML = `<strong>${row[1]}</strong><span><strong> - </strong> ${row[0]}</span><br><p>${row[2]}</p>`;
             modalBody.appendChild(rowElement);
           });
         });
