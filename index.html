@@ -208,7 +208,11 @@
               </div>
               <button type="submit">Submit</button>
               <hr />
-              <div class="modal-body" id="guestBookContent"></div>
+              <div
+                class="modal-body"
+                id="guestBookContent"
+                style="max-height: 300px; overflow-y: auto"
+              ></div>
             </form>
           </div>
         </div>
@@ -279,6 +283,9 @@
         .then((res) => res.json())
         .then((data) => {
           let modalBody = document.getElementById("guestBookContent");
+
+          // Reverse the order of the data to display most recent submissions first
+          data.content.reverse();
 
           // Iterate through the data and create HTML elements to display it
           data.content.forEach((row) => {
