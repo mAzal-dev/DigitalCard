@@ -291,7 +291,6 @@
         });
     </script>
     <script>
-      console.log("a");
       document.addEventListener("DOMContentLoaded", function () {
         // Get the guest book form element
         var guestBookForm = document.getElementById("guestBookForm");
@@ -299,25 +298,28 @@
         // Add form submission event listener
         guestBookForm.addEventListener("submit", function (event) {
           event.preventDefault(); // Prevent form submission
-          console.log("after clicked submit");
+
           // Collect form data
-          var formData = new FormData(guestBookForm);
-          for (var entry of formData.entries()) {
-            console.log(entry[0] + ": " + entry[1]);
-          }
+          var formData = {
+            name: document.getElementById("name").value,
+            message: document.getElementById("ucapan").value,
+          };
 
           // Make a POST request to your Google Apps Script URL
+          console.log(formData);
           fetch(
-            "https://script.google.com/macros/s/AKfycbwZ5SF4RPzMqBJ68nw0dd4Cwu_Kk4aianIXsa5hJE2YbpZNh3Va_CkanY9-YxfrrPG1/exec",
+            "https://script.google.com/macros/s/AKfycbziRe7GtgtkD-3vI6V67Jto9w8O-rF7Um8p4c3YubMMgE45sEqjbZWYAqn2ysIY-9PX/exec",
             {
               method: "POST",
-              body: formData,
+              body: JSON.stringify(formData),
             }
           )
             .then(function (response) {
+              console.log(Request);
               if (response.ok) {
                 // If the request is successful, reset the form
                 guestBookForm.reset();
+                location.reload();
                 alert("Form submitted successfully!");
               } else {
                 throw new Error("Form submission failed!");
