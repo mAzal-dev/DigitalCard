@@ -284,8 +284,33 @@
           data.content.forEach((row) => {
             let rowElement = document.createElement("div");
             rowElement.classList.add("guest-book-entry");
-            //rowElement.innerHTML = `<strong>${row[0]}</strong>: ${row[1]}`;
-            rowElement.innerHTML = `<strong>${row[1]}</strong><span><strong> - </strong> ${row[0]}</span><br><p>${row[2]}</p>`;
+            // Convert the date string to a Date object
+            var date = new Date(row[0]);
+            // Format the date as yyyy-mm-dd
+            // Calculate the time difference
+            var now = new Date();
+            var diff = now.getTime() - date.getTime();
+            var seconds = Math.floor(diff / 1000);
+            var minutes = Math.floor(seconds / 60);
+            var hours = Math.floor(minutes / 60);
+            var days = Math.floor(hours / 24);
+            var years = Math.floor(days / 365);
+
+            // Format the relative time
+            var relativeTime;
+            if (years > 0) {
+              relativeTime = years === 1 ? "1 year ago" : years + " years ago";
+            } else if (days > 0) {
+              relativeTime = days === 1 ? "1 day ago" : days + " days ago";
+            } else if (hours > 0) {
+              relativeTime = hours === 1 ? "1 hour ago" : hours + " hours ago";
+            } else if (minutes > 0) {
+              relativeTime =
+                minutes === 1 ? "1 minute ago" : minutes + " minutes ago";
+            } else {
+              relativeTime = "Just now";
+            }
+            rowElement.innerHTML = `<strong>${row[1]}</strong><span><strong> - </strong> ${relativeTime}</span><br><p>${row[2]}</p>`;
             modalBody.appendChild(rowElement);
           });
         });
