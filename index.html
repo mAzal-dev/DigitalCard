@@ -25,13 +25,18 @@
 
       /* Adjust the width and height as needed */
       .container-top {
-        width: 390px;
-        height: 844px;
+        width: 100%;
+        height: 100%; /* 50% of the viewport height */
         display: flex;
         align-items: center;
         justify-content: center;
       }
-
+      @media (min-width: 600px) {
+        .container-top {
+          width: 50%;
+          height: 50%;
+        }
+      }
       .container-top video {
         width: 100%;
         height: 100%;
@@ -68,9 +73,16 @@
         text-align: center;
         background-color: whitesmoke;
         color: white;
-        width: 390px;
-        height: 844px;
+        width: 100%; /* 90% of the viewport width */
+        height: 100%;
+        /* 50% of the viewport height */
         /*padding: 20px 0;*/
+      }
+      @media (min-width: 600px) {
+        footer {
+          width: 50%;
+          height: 50%;
+        }
       }
       audio:hover,
       audio:focus,
@@ -115,7 +127,7 @@
   </head>
   <body>
     <div class="container-top">
-      <video autoplay muted loop playsinline>
+      <video autoplay muted loop playsinline style="display: flex">
         <source src="img/Digital (Pre-Final).mp4" />
         <!-- Add additional source elements for other video formats if needed -->
         Your browser does not support the video tag.
