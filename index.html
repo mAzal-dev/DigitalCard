@@ -72,6 +72,28 @@
         height: 932px;
         /*padding: 20px 0;*/
       }
+      audio:hover,
+      audio:focus,
+      audio:active {
+        -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+        box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        transform: scale(1.05);
+      }
+      audio {
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+        -moz-box-shadow: 2px 2px 4px 0px #006773;
+        -webkit-box-shadow: 2px 2px 4px 0px #006773;
+        box-shadow: 2px 2px 4px 0px lightslategray;
+        -moz-border-radius: 7px 7px 7px 7px;
+        -webkit-border-radius: 7px 7px 7px 7px;
+        border-radius: 7px 7px 7px 7px;
+      }
     </style>
   </head>
   <body>
@@ -101,6 +123,8 @@
             <img src="img/placeholder.png" alt="Icon 4" class="footer-icon" />
             <p class="icon-title">Location</p>
           </div>
+        </div>
+        <div class="row">
           <div class="col" data-toggle="modal" data-target="#locationModal">
             <audio controls autoplay>
               <source
@@ -374,21 +398,5 @@
         });
       });
     </script>
-    <!--<script>
-      console.log("a");
-      var form = document.getElementById("sheetdb-form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(form.action, {
-          method: "POST",
-          body: new FormData(document.getElementById("sheetdb-form")),
-        })
-          .then((response) => response.json())
-          .then((html) => {
-            //You can put your code here
-            alert("sucess");
-          });
-      });
-    </script>-->
   </body>
 </html>
