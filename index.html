@@ -94,6 +94,23 @@
         -webkit-border-radius: 7px 7px 7px 7px;
         border-radius: 7px 7px 7px 7px;
       }
+      #guestBookContent {
+        max-height: 300px; /* Set the maximum height */
+        overflow-y: auto; /* Enable vertical scrolling */
+        border: 1px solid lightgray; /* Add a border */
+        border-radius: 3px; /* Add border radius */
+        scrollbar-width: thin; /* Set the width of the scrollbar */
+        scrollbar-color: lightgray transparent; /* Set the color of the scrollbar */
+      }
+
+      #guestBookContent::-webkit-scrollbar {
+        width: 8px; /* Set the width of the scrollbar */
+      }
+
+      #guestBookContent::-webkit-scrollbar-thumb {
+        background-color: lightgray; /* Set the color of the scrollbar thumb */
+        border-radius: 4px; /* Add border radius to the thumb */
+      }
     </style>
   </head>
   <body>
@@ -358,9 +375,9 @@
             }
             //rowElement.innerHTML = `<strong>${row[1]}</strong><span><strong> - </strong> ${relativeTime}</span><br><p>${row[2]}</p>`;
             rowElement.innerHTML = `<div class="guest-book-entry">
-                                      <strong style="font-size: 10px; color: #333;">${row[1]}</strong><span> - </span>
-                                      <span style="font-size: 9px; color: #666;">${relativeTime}</span><br>
-                                      <p style="font-size: 9px; color: #444;">"${row[2]}"</p>
+                                      <strong style="font-size: 15px; color: #333;">${row[1]}</strong> - 
+                                      <span style="font-size: 10px; color: #666;">${relativeTime}</span><br>
+                                      <p style="font-size: 13px; color: #444;">"${row[2]}"</p>
                                     </div>`;
             modalBody.appendChild(rowElement);
           });
