@@ -54,12 +54,6 @@
         font-size: 14px;
       }
 
-      .heading {
-        color: #d2b685;
-        font-family: "Cinzel", serif;
-        font-size: 14.4px;
-      }
-
       .content {
         color: #d2b685;
         text-align: center;
@@ -70,6 +64,9 @@
       }
 
       footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
         background-color: whitesmoke;
         color: white;
@@ -78,6 +75,17 @@
         /* 50% of the viewport height */
         /*padding: 20px 0;*/
       }
+      .modal-dialog {
+        position: fixed;
+        top: auto;
+        right: auto;
+        left: auto;
+        bottom: 0;
+        width: 96%; /* Adjust this value as needed */
+        display: flex;
+        justify-content: center;
+      }
+
       @media (min-width: 600px) {
         footer {
           width: 50%;
@@ -146,7 +154,7 @@
           </div>
           <div class="col" data-toggle="modal" data-target="#guestBookModal">
             <img src="img/guests-book.png" alt="Icon 2" class="footer-icon" />
-            <p class="icon-title">Guest Book</p>
+            <p class="icon-title">Ucapan</p>
           </div>
           <div class="col" data-toggle="modal" data-target="#locationModal">
             <img src="img/placeholder.png" alt="Icon 4" class="footer-icon" />
@@ -192,7 +200,29 @@
           </div>
           <div class="modal-body">
             <!-- Calendar modal content goes here -->
-            <h1>Hello</h1>
+            <div class="container text-center">
+              <div class="row">
+                <div class="col">
+                  <a href="calshow:" target="_blank">
+                    <img
+                      src="img/android.png"
+                      alt="Icon 1"
+                      class="footer-icon"
+                    />
+                  </a>
+                  <p class="icon-title">Android</p>
+                </div>
+                <div class="col">
+                  <a
+                    href="content://com.android.calendar/time/"
+                    target="_blank"
+                  >
+                    <img src="img/apple.png" alt="Icon 2" class="footer-icon" />
+                  </a>
+                  <p class="icon-title">IOS</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -221,6 +251,62 @@
           </div>
           <div class="modal-body">
             <!-- Telephone modal content goes here -->
+            <div class="container text-center">
+              <div class="row">
+                <div class="col-6">
+                  <h3>Rosliah</h3>
+                  <p>Ibu</p>
+                </div>
+                <div class="col col-sm">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=+60134150097"
+                    target="_blank"
+                  >
+                    <img
+                      src="img/whatapps.png"
+                      alt="whatapps"
+                      class="footer-icon"
+                    />
+                  </a>
+                </div>
+                <div class="col col-sm">
+                  <a href="tel:+60134150097" target="_blank">
+                    <img
+                      src="img/phone-call.png"
+                      alt="call"
+                      class="footer-icon"
+                    />
+                  </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <h3>Nazir</h3>
+                  <p>Abang</p>
+                </div>
+                <div class="col col-sm">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=+60103892235"
+                    target="_blank"
+                  >
+                    <img
+                      src="img/whatapps.png"
+                      alt="whatapps"
+                      class="footer-icon"
+                    />
+                  </a>
+                </div>
+                <div class="col col-sm">
+                  <a href="tel:+60103892235" target="_blank">
+                    <img
+                      src="img/phone-call.png"
+                      alt="call"
+                      class="footer-icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
