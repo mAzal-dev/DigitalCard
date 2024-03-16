@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900");
+#timer {
+  color: #f6f4f3;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  font-size: 0.7em;
+  letter-spacing: 3px;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+  display: inline-block;
+  padding: 5px;
+  width: 75px;
+  border-radius: 5px;
+}
+
+.days {
+  background: #f6f4f3;
+  color: #183059;
+}
+
+.hours {
+  background: #f6f4f3;
+  color: #183059;
+}
+
+.minutes {
+  background: #f6f4f3;
+  color: #183059;
+}
+
+.seconds {
+  background: #f6f4f3;
+  color: #183059;
+}
+.seconds .numbers {
+  font-size: 2em;
+}
+
+.numbers {
+  font-family: "Montserrat", sans-serif;
+  color: #183059;
+  font-size: 2em;
+}
+
+.white {
+  position: absolute;
+  background: #f6f4f3;
+  height: 85px;
+  width: 75px;
+  left: 30%;
+  top: 2%;
+}
+.white .triangle {
+  border-bottom: 14px solid #f6f4f3;
+}
+.white .string {
+  background: #f6f4f3;
+  border: 1px solid #f6f4f3;
+}
+
+.red {
+  position: absolute;
+  background: #ef2f3c;
+  left: 18%;
+  top: 9%;
+  height: 65px;
+  width: 70px;
+}
+.red .triangle {
+  border-bottom: 14px solid #ef2f3c;
+}
+.red .string {
+  background: #ef2f3c;
+  border: 1px solid #ef2f3c;
+}
+
+.blue {
+  position: absolute;
+  background: #276fbf;
+  height: 80px;
+  width: 80px;
+  left: 60%;
+  top: 5%;
+}
+.blue .triangle {
+  border-bottom: 14px solid #276fbf;
+}
+.blue .string {
+  background: #276fbf;
+  border: 1px solid #276fbf;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -8,130 +8,8 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     />
     <title>Wedding Invitation</title>
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; /* Center vertically */
-      }
-
-      /* Adjust the width and height as needed */
-      .container-top {
-        width: 100%;
-        height: 100%; /* 50% of the viewport height */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      @media (min-width: 600px) {
-        .container-top {
-          width: 50%;
-          height: 50%;
-        }
-      }
-      .container-top video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .footer-icon {
-        width: 25px;
-        border: 2px solid transparent;
-        border-radius: 5px;
-      }
-
-      .icon-title {
-        color: black;
-        font-size: 14px;
-      }
-
-      .content {
-        color: #d2b685;
-        text-align: center;
-      }
-
-      .groom {
-        font-family: "kissita", sans-serif;
-      }
-
-      footer {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-color: whitesmoke;
-        color: white;
-        width: 100%; /* 90% of the viewport width */
-        height: 100%;
-        /* 50% of the viewport height */
-        /*padding: 20px 0;*/
-      }
-      .modal-dialog {
-        position: fixed;
-        top: auto;
-        right: auto;
-        left: auto;
-        bottom: 0;
-        width: 96%; /* Adjust this value as needed */
-        display: flex;
-        justify-content: center;
-      }
-
-      @media (min-width: 600px) {
-        footer {
-          width: 50%;
-          height: 50%;
-        }
-      }
-      audio:hover,
-      audio:focus,
-      audio:active {
-        -webkit-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-        box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
-        -webkit-transform: scale(1.05);
-        -moz-transform: scale(1.05);
-        transform: scale(1.05);
-      }
-      audio {
-        -webkit-transition: all 0.5s linear;
-        -moz-transition: all 0.5s linear;
-        -o-transition: all 0.5s linear;
-        transition: all 0.5s linear;
-        -moz-box-shadow: 2px 2px 4px 0px #006773;
-        -webkit-box-shadow: 2px 2px 4px 0px #006773;
-        box-shadow: 2px 2px 4px 0px lightslategray;
-        -moz-border-radius: 7px 7px 7px 7px;
-        -webkit-border-radius: 7px 7px 7px 7px;
-        border-radius: 7px 7px 7px 7px;
-      }
-      #guestBookContent {
-        max-height: 300px; /* Set the maximum height */
-        overflow-y: auto; /* Enable vertical scrolling */
-        border: 1px solid lightgray; /* Add a border */
-        border-radius: 3px; /* Add border radius */
-        scrollbar-width: thin; /* Set the width of the scrollbar */
-        scrollbar-color: lightgray transparent; /* Set the color of the scrollbar */
-      }
-
-      #guestBookContent::-webkit-scrollbar {
-        width: 8px; /* Set the width of the scrollbar */
-      }
-
-      #guestBookContent::-webkit-scrollbar-thumb {
-        background-color: lightgray; /* Set the color of the scrollbar thumb */
-        border-radius: 4px; /* Add border radius to the thumb */
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="container-top">
@@ -201,7 +79,7 @@
           <div class="modal-body">
             <!-- Calendar modal content goes here -->
             <div class="container text-center">
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col">
                   <a href="calshow:" target="_blank">
                     <img
@@ -220,6 +98,13 @@
                     <img src="img/apple.png" alt="Icon 2" class="footer-icon" />
                   </a>
                   <p class="icon-title">IOS</p>
+                </div>
+              </div> -->
+              <div class="row">
+                <div class="col">
+                  <div class="container">
+                    <div id="timer"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -431,6 +316,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="js/calendar.js"></script>
     <script>
       fetch(
         "https://script.google.com/macros/s/AKfycbw1EDZN2C-71wkEwlUfzqnU-jGu6Bzn_sRsYQdXzSobVTNONs8Dg8Qx6I7g3Y-M1RvE/exec"
